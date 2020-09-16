@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json.schemastore.org/install",
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./build/index.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": [
+          "_default"
+        ],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "token": {
+        "title": "Public Token",
+        "description": "Integration token you can find on your dashboard account.",
+        "order": 0,
+        "type": "string",
+        "format": "string",
+        "default": ""
+      },
+      "url": {
+        "title": "URL script",
+        "description": "URL of widget script. Must start with https://.",
+        "order": 1,
+        "type": "string",
+        "format": "url",
+        "default": "https://assets.videsk.io/js/videsk-widget.min.js"
+      }
+    }
+  }
+}
